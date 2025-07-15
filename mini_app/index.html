@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+
+    <title>My NextOn</title>
+
+    <script src="https://telegram.org/js/telegram-web-app.js?58"></script>
+
+    <style>
+        :root {
+            background-color: #ffffff;
+
+            /* --tg-safe-area-inset-top: 0px;
+            --tg-safe-area-inset-right: 0px;
+            --tg-safe-area-inset-bottom: 0px;
+            --tg-safe-area-inset-left: 0px;
+
+            --tg-content-safe-area-inset-top: 0px;
+            --tg-content-safe-area-inset-right: 0px;
+            --tg-content-safe-area-inset-bottom: 0px;
+            --tg-content-safe-area-inset-left: 0px; */
+
+            padding:
+                calc(var(--tg-safe-area-inset-top) + var(--tg-content-safe-area-inset-top)) calc(var(--tg-safe-area-inset-right) + var(--tg-content-safe-area-inset-right)) calc(var(--tg-safe-area-inset-bottom) + var(--tg-content-safe-area-inset-bottom)) calc(var(--tg-safe-area-inset-left) + var(--tg-content-safe-area-inset-left));
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            margin-top: 5px;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        header {
+            padding: 10px;
+            padding-top: 0;
+        }
+
+        main {
+            padding: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #666;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div style="display: flex; align-items: center; justify-content: center; gap: 5px;">
+            <img src="./media/NextOn-logo.jpg" width="50" height="50" style="margin: 0" />
+            <span style="font-size: 28px;">
+                <span style="font-style: italic; color: rgb(131, 131, 131); margin-right: 3px;">my</span><span
+                    style="color: red">NEXT</span>ON
+            </span>
+        </div>
+    </header>
+    <main>
+        <section>
+            <!-- For development purpose -->
+            <div id="ver" hidden>ver</div>
+
+            <div style="display: flex; align-items: center; justify-content: center; flex-flow: column; background-color: #ebebeb; padding: 20px; border-radius: 10px;">
+                <div><img id="imgUser" src="./media/NextOn-logo.jpg" width="140" height="140" style="border-radius: 50%" /></div>
+                <div id="username" style="font-size: 20px; font-weight: bold; color: #737373;"></div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 myNextOn. All rights reserved.</p>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+
+</html>
