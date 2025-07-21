@@ -13,6 +13,10 @@
     <script src="https://telegram.org/js/telegram-web-app.js?58"></script>
 
     <style>
+        [hidden] {
+            display: none !important;
+        }
+
         :root {
             background-color: #ffffff;
 
@@ -67,21 +71,30 @@
         </div>
     </header>
     <main>
-        <section>
-            <!-- For development purpose -->
-            <div id="ver" hidden>ver</div>
+        <!-- For development purpose -->
+        <div hidden>
+            <div id="ver">ver</div>
+            <div id="console">NA</div>
+        </div>
 
-            <div style="display: flex; align-items: center; justify-content: center; flex-flow: column; background-color: #ebebeb; padding: 20px; border-radius: 10px;">
-                <div><img id="imgUser" src="./media/NextOn-logo.jpg" width="140" height="140" style="border-radius: 50%" /></div>
-                <div id="username" style="font-size: 20px; font-weight: bold; color: #737373;"></div>
-            </div>
-        </section>
+        <div style="display: flex; align-items: center; justify-content: center; flex-flow: column; background-color: #ebebeb; padding: 20px; border-radius: 10px;">
+            <div><img id="imgUser" src="./media/NextOn-logo.jpg" width="140" height="140" style="border-radius: 50%" /></div>
+            <div id="username" style="font-size: 20px; font-weight: bold; color: #737373;"></div>
+        </div>
+        
     </main>
     <footer>
+        <div hidden id="btn-addToHomeScreen" style="width: 100%; display: flex; justify-content: center;">
+            <div
+                style="width: max-content; padding: 0 10px; height: 28px; border-radius: 14px; display: flex; align-items: center; color: #999999; box-shadow: 0px 1px 5px 1px #bfbfbf;"
+                onclick="tma.addToHomeScreen();">
+                Add to Home Screen
+            </div>
+        </div>
         <p>&copy; 2025 myNextOn. All rights reserved.</p>
     </footer>
 
-    <script src="./index.js"></script>
+    <script src="./index.js?1"></script>
 </body>
 
 </html>

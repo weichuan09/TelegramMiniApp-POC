@@ -11,6 +11,8 @@ var tma = window.Telegram.WebApp;
 
     insertImg("imgUser", tma.initDataUnsafe.user.photo_url)
     insertText("username", tma.initDataUnsafe.user.first_name + " " + tma.initDataUnsafe.user.last_name)
+
+    tma.checkHomeScreenStatus(showAddToHomeScreenBtn);
 })();
 
 
@@ -34,6 +36,15 @@ function setFullscreen() {
     }
 }
 
+function showAddToHomeScreenBtn(currentHSStatus) {
+    var HOMESCREENSTATUS_UNKNOWN = "unknown";
+    var HOMESCREENSTATUS_MISSED = "missed";
+
+    if ([HOMESCREENSTATUS_UNKNOWN, HOMESCREENSTATUS_MISSED].includes(currentHSStatus)) {
+        document.getElementById("btn-addToHomeScreen").removeAttribute("hidden")
+    }
+}
+
 // function initScreenDisplaySafeArea() {
 //     tma.onEvent("contentSafeAreaChanged", setScreenDisplaySafeArea);
 // }
@@ -50,3 +61,7 @@ function setFullscreen() {
 //     document.documentElement.style.setProperty('--tg-content-safe-area-inset-bottom', `${tma.contentSafeAreaInset.bottom}px`);
 //     document.documentElement.style.setProperty('--tg-content-safe-area-inset-left', `${tma.contentSafeAreaInset.left}px`);
 // }
+
+function divconsole(text) {
+    insertText("console", text)
+}
